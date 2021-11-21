@@ -3,7 +3,7 @@ import env from "react-dotenv";
 
 const SearchBar = (props) => {
     const handleSearchSubmit = async () => {
-        await fetch(`http://${env.BACKEND_TARGET}:${env.TARGET_PORT}}/v1/api/search/${props.search}`)
+        await fetch(`http://${env.BACKEND_TARGET}:${env.TARGET_PORT}/v1/api/search/${props.search}`)
         .then(response => response.body)
         .then(rb => {
             const reader = rb.getReader();
